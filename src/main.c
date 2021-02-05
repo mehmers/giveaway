@@ -16,6 +16,7 @@ bool search(int num, int len, int arr[]){
 int main(void) {
 
   FILE *fp=fopen("names.txt","r");
+  FILE *fw=fopen("result.txt","w");
   char * line = NULL;
   size_t len = 0;
   ssize_t read;
@@ -42,6 +43,8 @@ int main(void) {
   scanf("%d", &numberOfWinner);
   }
 
+  fprintf(fw, "Welcome to Giveaway !\n\n");
+
   int winners[numberOfWinner];
   srand(time(NULL));
   for(int i = 0 ; i < numberOfWinner ; i++){
@@ -64,13 +67,16 @@ int main(void) {
     if(exist){
       temp++;
       printf("%d.Winner : %s", temp, line);
+      fprintf(fw,"%d.Winner : %s", temp, line);
     }
   }
 
+  fprintf(fw, "\nGiveaway coded by mehmers on github.com");
+
   if(line){free(line);}
-
+  
   fclose(fp);
-
+  fclose(fw);
   return 0;
 }
 
