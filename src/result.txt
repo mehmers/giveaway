@@ -1,0 +1,10 @@
+Welcome to Giveaway !
+
+1.Winner : Name4 Surname4
+2.Winner : Name6 Surname6
+3.Winner : Name7 Surname7
+4.Winner : Name11 Surname11
+
+Giveaway coded by mehmers on github.com
+
+(This file is sample output for program)
